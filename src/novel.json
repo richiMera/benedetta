@@ -1,0 +1,37 @@
+{
+    "title": "Il Viaggio di N",
+    "author": "Riccardo Ferrari",
+    "chapters": [
+      {
+        "title": "Capitolo 1: La Partenza",
+        "content": [
+          {
+            "type": "paragraph",
+            "text": "Nel cuore delle montagne, N si preparava per il suo viaggio verso la capitale. L'alba stava appena iniziando a colorare il cielo."
+          },
+          {
+            "type": "paragraph",
+            "text": "Era un giorno importante per lui, un passo verso il futuro, lontano dalla sua casa."
+          },
+          {
+            "type": "paragraph",
+            "text": "Tuttavia, il cuore di N era pesante. Non riusciva a scrollarsi di dosso un sentimento di solitudine."
+          }
+        ]
+      },
+      {
+        "title": "Capitolo 2: La Cerimonia",
+        "content": [
+          {
+            "type": "paragraph",
+            "text": "La cerimonia di arruolamento era l'evento più atteso dell'anno. N si trovava nel mezzo della piazza, circondato da centinaia di ragazzi."
+          },
+          {
+            "type": "paragraph",
+            "text": "Sentiva il battito del suo cuore accelerare mentre attendeva il momento in cui avrebbe dovuto fare il suo ingresso."
+          }
+        ]
+      }
+    ]
+  }
+  
