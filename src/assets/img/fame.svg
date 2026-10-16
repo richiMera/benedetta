@@ -1,6 +1,8 @@
-<svg width="84" height="83" viewBox="0 0 84 83" fill="none" xmlns="http://www.w3.org/2000/svg">
-<circle cx="42" cy="41.5" r="40.5" stroke="#DADADA" stroke-width="2"/>
-<path d="M51 38C51 42.9706 46.9706 47 42 47C37.0294 47 33 42.9706 33 38" stroke="#DADADA" stroke-width="2"/>
-<circle cx="32" cy="24" r="2" fill="#DADADA"/>
-<circle cx="52" cy="24" r="2" fill="#DADADA"/>
+<svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="40" cy="40" r="38.5" stroke="#64A376" stroke-width="3"/>
+<path d="M48.6746 36.6265C48.6746 41.4174 44.7908 45.3012 39.9999 45.3012C35.209 45.3012 31.3252 41.4174 31.3252 36.6265" stroke="#64A376" stroke-width="3"/>
+<path d="M30.1735 31.8073C32.038 33.6718 32.1892 36.5438 30.5111 38.2219C28.8329 39.9 25.961 39.7489 24.0964 37.8843" stroke="#64A376" stroke-width="3"/>
+<path d="M49.6412 31.8073C47.7767 33.6718 47.6255 36.5438 49.3036 38.2219C50.9818 39.9 53.8537 39.7489 55.7183 37.8843" stroke="#64A376" stroke-width="3"/>
+<circle cx="30.3615" cy="23.1323" r="1.92771" fill="#64A376"/>
+<circle cx="49.6386" cy="23.1323" r="1.92771" fill="#64A376"/>
 </svg>

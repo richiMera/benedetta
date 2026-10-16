@@ -16,6 +16,11 @@
 }
 
 
+::selection {
+    background-color: #64a376;
+}
+
+
 
 * {
     box-sizing: border-box;
@@ -38,6 +43,16 @@
     --black: #18212E;
 
 
+}
+
+.np-scrollbar {
+    scrollbar-width: none;
+    /* Per browser Firefox */
+}
+
+.np-scrollbar::-webkit-scrollbar {
+    display: none;
+    /* Per browser WebKit (Chrome, Edge, Safari) */
 }
 
 a {
@@ -159,12 +174,15 @@ a {
     border-top: 1px solid var(--blue);
 }
 
-
-
+.hoverd-card:hover {
+    bottom: 24px !important;
+    background-color: rgba(241, 248, 243, 0.06) !important;
+    border: 2px solid rgba(241, 248, 243, 0.06) !important;
+}
 
 
 h1 {
-    font-size: 80px;
+    font-size: 4.5vi;
     letter-spacing: -2px;
     line-height: 110%;
     font-weight: 500;
@@ -228,14 +246,14 @@ h4 {
 }
 
 .caption {
-    font-size: 16px;
+    font-size: 14px;
     letter-spacing: 0.2px;
     line-height: 100%;
     font-weight: 500;
 }
 
 .button {
-    font-size: 20px;
+    font-size: 16px;
     letter-spacing: 0px;
     line-height: 100%;
     font-weight: 500;
@@ -248,8 +266,9 @@ h4 {
     }
 
     h1 {
-        font-size: 48px;
+        font-size: 45px;
         line-height: 110%;
+        letter-spacing: -0.5px;
     }
 
     h2 {
@@ -284,6 +303,13 @@ h4 {
     .caption {
         font-size: 14px;
 
+    }
+
+    .button {
+        font-size: 16px;
+        letter-spacing: 0px;
+        line-height: 100%;
+        font-weight: 500;
     }
 
 
