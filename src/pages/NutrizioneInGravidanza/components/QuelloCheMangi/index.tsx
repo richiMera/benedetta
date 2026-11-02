@@ -8,17 +8,20 @@ const QuelloCheMangi = ({ isMobile }: QuelloCheMangiProps) => {
         <section
             id="quello-che-mangi"
             style={{
-                background: 'rgb(46, 58, 43)',
-                color: 'rgb(251, 248, 243)',
+
+                color: 'rgb(241, 248, 243)',
+                maxWidth: '1160px',
+                margin: '0 auto',
+                padding: isMobile
+                    ? '56px 24px'
+                    : 'clamp(56px, 8vw, 112px) 24px',
             }}
         >
+            <p className='overline' style={{ marginBottom: '32px', color: '#9CC8A7' }}>nutrizione</p>
             <div
                 style={{
-                    maxWidth: '1160px',
-                    margin: '0 auto',
-                    padding: isMobile
-                        ? '56px 24px'
-                        : 'clamp(56px, 8vw, 112px) 24px',
+
+
                     display: 'grid',
                     gridTemplateColumns: isMobile
                         ? 'minmax(0, 1fr)'
@@ -28,20 +31,14 @@ const QuelloCheMangi = ({ isMobile }: QuelloCheMangiProps) => {
                     boxSizing: 'border-box',
                 }}
             >
-                <h2
-                    style={{
-                        fontFamily: 'Inter, sans-serif',
-                        fontWeight: 600,
-                        letterSpacing: '-0.025em',
-                        fontSize: isMobile
-                            ? '32px'
-                            : 'clamp(32px, 4vw, 50px)',
-                        lineHeight: 1.08,
-                        margin: 0,
-                        textWrap: 'balance',
-                        position: 'relative',
-                    }}
-                >
+
+
+                <h3 style={{
+                    marginBottom: '64px', color: '#F1F8F3', lineHeight: 1.08,
+                    margin: 0,
+                    textWrap: 'balance',
+                    position: 'relative',
+                }}>
                     Quello che mangi oggi parla anche al tuo{' '}
                     <span
                         style={{
@@ -67,25 +64,25 @@ const QuelloCheMangi = ({ isMobile }: QuelloCheMangiProps) => {
                             <path
                                 d="M24 40 C 8 14, 110 0, 182 16 C 206 24, 192 52, 112 55 C 48 58, 6 50, 16 28"
                                 fill="none"
-                                stroke="#9db493"
-                                strokeWidth="1.8"
+                                stroke="rgb(100, 163, 118)"
+                                strokeWidth="3"
                                 strokeLinecap="round"
                                 vectorEffect="non-scaling-stroke"
                             />
                         </svg>
                     </span>
-                </h2>
+                </h3>
 
                 <div
                     style={{
                         display: 'flex',
                         flexDirection: 'column',
                         gap: '16px',
-                        fontSize: '18px',
+
                         lineHeight: 1.6,
                     }}
                 >
-                    <p
+                    <p className="p-large"
                         style={{
                             margin: 0,
                             textWrap: 'pretty',
@@ -100,9 +97,10 @@ const QuelloCheMangi = ({ isMobile }: QuelloCheMangiProps) => {
                     </p>
 
                     <p
+                        className="p-large"
                         style={{
                             margin: 0,
-                            color: 'rgb(200, 214, 192)',
+                            color: 'rgb(190, 220, 195)',
                             textWrap: 'pretty',
                         }}
                     >

@@ -23,10 +23,18 @@ const Consulenze: React.FC<Props> = ({ isMedium, isMobile }) => {
             }
         },
         {
+            title: 'Consulenza in Studio',
+            // caption: '*Verrai reindirizzato sul sito di OsteoAtlas',
+            content: 'Benedetta Mosole nutrizionista - via G. Vecellio 48/a Spresiano (TV)',
+            onClick: () => {
+                window.open('https://calendly.com/benedetta-mosole/consulenza-nutrizionale', '_blank');
+            }
+        },
+        {
             title: 'Consulenza Online',
             content: 'Ovunque ti trovi',
             onClick: () => {
-                window.open('https://www.miodottore.it/benedetta-mosole/nutrizionista/rho#profile-pricing', '_blank');
+                window.open('https://calendly.com/benedetta-mosole/consulenza-nutrizionale', '_blank');
             }
 
         },
@@ -66,7 +74,7 @@ const Consulenze: React.FC<Props> = ({ isMedium, isMobile }) => {
             <Grid sx={{ marginBottom: '80px' }} container spacing={3}>
                 {consulenze.map((p: any, index: number) => {
                     return (
-                        <Grid size={{ xs: 12, md: 6 }} key={index}>
+                        <Grid size={{ xs: 12, md: 4 }} key={index}>
                             <Card type='consulenza' caption={p?.caption} onClickBtn={p.onClick} isMobile={isMobile} content={p.content} title={p.title
                             } />
                         </Grid>

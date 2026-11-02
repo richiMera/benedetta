@@ -47,32 +47,35 @@ const FAQ: React.FC<Props> = ({ isMedium, isMobile, type = 'home' }) => {
         },
 
 
+    ] :
+        [
+            {
+                number: '1.',
+                question: 'Le visite singole si svolgono in studio o online?',
+                answer: 'Le visite singole, sia la prima visita nutrizionale che i controlli successivi, possono essere effettuate sia in studio che online, a seconda delle tue esigenze e di come ti è più comodo.',
+            },
+            {
+                number: '2.',
+                question: 'Il percorso di 3 mesi si può fare anche in studio?',
+                answer: 'No, il percorso di 3 mesi si svolge esclusivamente online. Questa modalità è pensata per garantirti la massima flessibilità e una presenza costante, assicurando continuità e supporto per tutto il periodo, in particolare durante la gravidanza.',
+            },
+            {
+                number: '3.',
+                question: 'Posso iniziare a qualsiasi settimana?',
+                answer: 'Sì. Puoi iniziare quando vuoi, anche a gravidanza avanzata o dopo il parto. Partiamo da dove sei.',
+            },
+            {
+                number: '4.',
+                question: 'Serve la richiesta del medico?',
+                answer: 'No. Se hai un ginecologo o un’ostetrica di riferimento, possiamo condividere con loro le indicazioni.',
+            },
+            {
+                number: '5.',
+                question: 'Cosa porto alla prima visita?',
+                answer: 'Gli esami del sangue recenti e, se li hai, i referti delle visite. Il resto lo raccogliamo con il questionario iniziale.',
+            },
+        ];
 
-
-
-
-    ] : [
-        {
-            number: '1.',
-            question: 'Lavori anche online?',
-            answer: 'Sì. Puoi scegliere tra lo studio a Rho o Spresiano e la visita online, con la stessa attenzione e gli stessi materiali.',
-        },
-        {
-            number: '2.',
-            question: 'Posso iniziare a qualsiasi settimana?',
-            answer: 'Sì. Puoi iniziare quando vuoi, anche a gravidanza avanzata o dopo il parto. Partiamo da dove sei.',
-        },
-        {
-            number: '3.',
-            question: 'Serve la richiesta del medico?',
-            answer: 'No. Se hai un ginecologo o un’ostetrica di riferimento, possiamo condividere con loro le indicazioni.',
-        },
-        {
-            number: '4.',
-            question: 'Cosa porto alla prima visita?',
-            answer: 'Gli esami del sangue recenti e, se li hai, i referti delle visite. Il resto lo raccogliamo con il questionario iniziale.',
-        },
-    ];
 
     return (
         <div style={{ position: 'relative' }}>

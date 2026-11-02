@@ -1,3 +1,5 @@
+import checkIcon from '../../../../assets/img/check.svg'
+import Button from '../../../../components/Button';
 
 type IlPercorsoProps = {
     isMobile: boolean;
@@ -66,7 +68,7 @@ const IlPercorso = ({ isMobile }: IlPercorsoProps) => {
                     : 'clamp(56px, 8vw, 112px) 24px',
                 display: 'flex',
                 flexDirection: 'column',
-                gap: '44px',
+
                 boxSizing: 'border-box',
             }}
         >
@@ -79,39 +81,16 @@ const IlPercorso = ({ isMobile }: IlPercorsoProps) => {
                     maxWidth: '640px',
                 }}
             >
-                <span
-                    style={{
-                        fontSize: '13px',
-                        letterSpacing: '0.1em',
-                        textTransform: 'uppercase',
-                        color: 'rgb(90, 115, 80)',
-                        fontWeight: 700,
-                    }}
-                >
-                    Il percorso
-                </span>
+                <p className='overline' style={{ marginBottom: '24px', color: 'rgb(49, 106, 68)' }}> Il percorso</p>
+                <h3 style={{ marginBottom: '64px', color: 'rgb(46, 58, 43)' }}> Tra una visita e l&apos;altra non sei sola.</h3>
 
-                <h2
-                    style={{
-                        ...testoBase,
-                        fontWeight: 600,
-                        letterSpacing: '-0.025em',
-                        fontSize: isMobile
-                            ? '30px'
-                            : 'clamp(30px, 3.6vw, 44px)',
-                        lineHeight: 1.1,
-                        textWrap: 'balance',
-                    }}
-                >
-                    Tra una visita e l&apos;altra non sei sola.
-                </h2>
             </div>
 
             {/* Le quattro fasi */}
             <ol
                 style={{
                     listStyle: 'none',
-                    margin: 0,
+                    marginBottom: isMobile ? '44px' : '96px',
                     padding: 0,
                     display: 'grid',
                     gridTemplateColumns: isMobile
@@ -143,7 +122,7 @@ const IlPercorso = ({ isMobile }: IlPercorsoProps) => {
                                 borderRadius: '50%',
                                 background:
                                     index === 0
-                                        ? 'rgb(157, 180, 147)'
+                                        ? 'rgb(100, 163, 118)'
                                         : 'rgb(251, 248, 243)',
                                 border: '2px solid rgb(46, 58, 43)',
                                 boxSizing: 'border-box',
@@ -219,7 +198,7 @@ const IlPercorso = ({ isMobile }: IlPercorsoProps) => {
                         <p
                             style={{
                                 ...testoBase,
-                                color: 'rgb(92, 107, 97)',
+                                color: 'rgb(15, 31, 21)',
                                 lineHeight: 1.5,
                             }}
                         >
@@ -247,7 +226,7 @@ const IlPercorso = ({ isMobile }: IlPercorsoProps) => {
 
                         <span
                             style={{
-                                color: 'rgb(92, 107, 97)',
+                                color: 'rgb(15, 31, 21)',
                                 fontSize: '15px',
                                 lineHeight: 1.5,
                             }}
@@ -267,16 +246,28 @@ const IlPercorso = ({ isMobile }: IlPercorsoProps) => {
                             lineHeight: 1.5,
                         }}
                     >
-                        {visitaSingola.map((voce) => (
-                            <li key={voce}>✓ {voce}</li>
+                        {visitaSingola.map((voce, vocIndex) => (
+                            <div key={vocIndex} style={{ display: 'flex', alignItems: 'center', gap: '8px', color: 'rgb(15, 31, 21)', }}>
+                                <img draggable={false} src={checkIcon} />
+                                <p className='p-regular'>{voce}</p>
+                            </div>
                         ))}
-                        <li style={{ color: 'rgb(92, 107, 97)' }}>
+                        <li className='p-regular' style={{ color: 'rgb(15, 31, 21)' }}>
                             — Nessun supporto tra le visite
                         </li>
                     </ul>
 
                     <a
-                        href="#prenota"
+                        href="https://calendly.com/benedetta-mosole/consulenza-nutrizionale"
+                        target="blank"
+                        onMouseEnter={(e) => {
+
+                            e.currentTarget.style.color = '#5A7350';
+                        }}
+                        onMouseLeave={(e) => {
+
+                            e.currentTarget.style.color = 'rgb(46, 58, 43)';
+                        }}
                         style={{
                             ...bottoneBase,
                             border: '1.5px solid rgb(46, 58, 43)',
@@ -296,26 +287,44 @@ const IlPercorso = ({ isMobile }: IlPercorsoProps) => {
                         display: 'flex',
                         flexDirection: 'column',
                         gap: '18px',
-                        background: 'rgb(157, 180, 147)',
+                        background: 'rgb(221, 238, 223)',
                         color: 'rgb(46, 58, 43)',
+                        border: '1.5px solid rgb(217, 210, 197)',
                         boxSizing: 'border-box',
                     }}
                 >
-                    <span
-                        style={{
-                            alignSelf: 'flex-start',
-                            background: 'rgb(46, 58, 43)',
-                            color: 'rgb(251, 248, 243)',
-                            fontSize: '12px',
-                            letterSpacing: '0.06em',
-                            textTransform: 'uppercase',
-                            padding: '5px 12px',
-                            borderRadius: '999px',
-                            fontWeight: 700,
-                        }}
-                    >
-                        Consigliato in gravidanza
-                    </span>
+                    <div style={{ display: 'flex', gap: '10px' }}>
+                        <span
+                            style={{
+                                alignSelf: 'flex-start',
+                                border: '1px solid rgb(46, 58, 43)',
+                                color: 'rgb(46, 58, 43)',
+                                fontSize: '12px',
+                                letterSpacing: '0.06em',
+                                textTransform: 'uppercase',
+                                padding: '5px 12px',
+                                borderRadius: '999px',
+                                fontWeight: 700,
+                            }}
+                        >
+                            Consigliato in gravidanza
+                        </span>
+                        <span
+                            style={{
+                                alignSelf: 'flex-start',
+                                border: '1px solid rgb(46, 58, 43)',
+                                color: 'rgb(46, 58, 43)',
+                                fontSize: '12px',
+                                letterSpacing: '0.06em',
+                                textTransform: 'uppercase',
+                                padding: '5px 12px',
+                                borderRadius: '999px',
+                                fontWeight: 700,
+                            }}
+                        >
+                            Solo online
+                        </span>
+                    </div>
 
                     <div
                         style={{
@@ -379,23 +388,19 @@ const IlPercorso = ({ isMobile }: IlPercorsoProps) => {
                             lineHeight: 1.5,
                         }}
                     >
-                        {percorsoCompleto.map((voce) => (
-                            <li key={voce}>✓ {voce}</li>
+                        {percorsoCompleto.map((voce, index) => (
+                            <div key={index} style={{ display: 'flex', alignItems: 'center', gap: '8px', color: 'rgb(46, 58, 43)', }}>
+                                <img draggable={false} src={checkIcon} />
+                                <p className='p-regular'>{voce}</p>
+                            </div>
                         ))}
                     </ul>
+                    <div style={{ color: 'rgb(251, 248, 243)' }}>
+                        <Button type={'small'} bgColor='rgb(100, 163, 118)' text='Prenota una visita' onClick={() => {
+                            window.open('https://calendly.com/benedetta-mosole/consulenza-nutrizionale', '_blank');
+                        }} />
+                    </div>
 
-                    <a
-                        href="#prenota"
-                        style={{
-                            ...bottoneBase,
-                            background: 'rgb(46, 58, 43)',
-                            color: 'rgb(251, 248, 243)',
-                            padding: '14px 26px',
-                            fontWeight: 700,
-                        }}
-                    >
-                        Inizia il percorso
-                    </a>
                 </div>
             </div>
         </section>

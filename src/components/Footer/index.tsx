@@ -1,9 +1,9 @@
 
-import instaIcon from '../../assets/img/insta.svg';
-import linkedinIcon from '../../assets/img/linkedin.svg';
+
 import footerImg from '../../assets/img/benedetta-mosole-footer.webp';
 import Button from '../Button';
 import './style.css';
+import SocialFooter from '../SocialFooter';
 interface Props {
     isMedium: boolean;
     isMobile: boolean;
@@ -30,10 +30,10 @@ const Footer: React.FC<Props> = ({ isMedium, isMobile, isForIpad, isForIpadHor }
             }} style={{ marginBottom: '48px', fontSize: isMobile ? '20px' : isForIpadHor || isForIpad ? '24px' : '', color: '#275538', cursor: 'pointer' }}>nutrizionistabm@gmail.com</h4>
             <div style={{ color: '#ddeedf', marginBottom: '96px' }}>
                 <Button type={'big'} bgColor='#316a44' text='Prenota una visita' onClick={() => {
-                    window.open('https://www.miodottore.it/benedetta-mosole/nutrizionista/rho#profile-pricing', '_blank');
+                    window.open('https://calendly.com/benedetta-mosole/consulenza-nutrizionale', '_blank');
                 }} />
             </div>
-            <div style={{ display: 'flex', gap: '16px', marginBottom: '56px' }}>
+            {/* <div style={{ display: 'flex', gap: '16px', marginBottom: '56px' }}>
                 <a href='https://www.instagram.com/drittialsodo/' target='_blank'>
                     <img draggable={false} src={instaIcon} />
                 </a>
@@ -42,8 +42,12 @@ const Footer: React.FC<Props> = ({ isMedium, isMobile, isForIpad, isForIpadHor }
                 </a>
 
             </div>
-            <p style={{ width: isMobile || isForIpad || isForIpadHor ? '40%' : '', color: '#0f1f15', }} className='caption'>©2025 | Dott.ssa Benedetta Mosole | Ordine dei Biologi Tri_A3566 |  P.ta IVA 05474130266</p>
-
+            <p style={{ width: isMobile || isForIpad || isForIpadHor ? '40%' : '', color: '#0f1f15', }} className='caption'>©2025 | Dott.ssa Benedetta Mosole | Ordine dei Biologi Tri_A3566 |  P.ta IVA 05474130266</p> */}
+            <SocialFooter
+                isMobile={isMobile}
+                isForIpad={isForIpad}
+                isForIpadHor={isForIpadHor}
+            />
             <img onContextMenu={(e: any) => { e.preventDefault() }} draggable={false} style={{ position: 'absolute', bottom: '0', right: isMobile ? '-20%' : isForIpad ? '0%' : isForIpadHor ? '0%' : '0', width: isMobile ? '90%' : isForIpad ? '60%' : isForIpadHor ? '50%' : '45%' }} src={footerImg} />
 
         </div>

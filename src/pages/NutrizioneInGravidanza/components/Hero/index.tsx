@@ -1,5 +1,6 @@
 
 import heroIage from '../../../../assets/img/Caroselli - Benedetta Mosole (1).png'
+import Button from '../../../../components/Button';
 type HeroProps = {
     isMobile: boolean;
 
@@ -14,7 +15,7 @@ const Hero = ({ isMobile }: HeroProps) => {
                 margin: '0 auto',
                 padding: isMobile
                     ? '40px 24px'
-                    : 'clamp(40px, 7vw, 96px) 24px',
+                    : '0 24px clamp(40px, 7vw, 96px) 24px',
                 display: 'grid',
                 gridTemplateColumns: isMobile
                     ? 'minmax(0, 1fr)'
@@ -31,26 +32,16 @@ const Hero = ({ isMobile }: HeroProps) => {
                     gap: '22px',
                 }}
             >
-                <span
-                    style={{
-                        fontSize: '13px',
-                        letterSpacing: '0.1em',
-                        textTransform: 'uppercase',
-                        color: 'rgb(90, 115, 80)',
-                        fontWeight: 700,
-                    }}
-                >
-                    NUTRIZIONE IN GRAVIDANZA · RHO, SPRESIANO E ONLINE
-                </span>
-
+                <p className='overline' style={{ color: '#316A44' }}> NUTRIZIONE IN GRAVIDANZA · RHO, SPRESIANO E ONLINE</p>
                 <h1
                     style={{
                         fontFamily: 'Inter, sans-serif',
                         fontWeight: 600,
+                        color: '#0F1F15',
                         letterSpacing: '-0.015em',
                         fontSize: isMobile
-                            ? 'clamp(30px, 7vw, 38px)'
-                            : 'clamp(30px, 3.5vw, 44px)',
+                            ? 'clamp(30px, 7vw, 50px)'
+                            : 'clamp(30px, 3.5vw, 60px)',
                         lineHeight: 1.12,
                         margin: 0,
                     }}
@@ -60,7 +51,7 @@ const Hero = ({ isMobile }: HeroProps) => {
                     in gravidanza,{' '}
                     <em
                         style={{
-                            color: 'rgb(90, 115, 80)',
+                            color: '#64A376',
                             fontStyle: 'normal',
                             fontWeight: 600,
                         }}
@@ -82,10 +73,10 @@ const Hero = ({ isMobile }: HeroProps) => {
                                 preserveAspectRatio="none"
                                 style={{
                                     position: 'absolute',
-                                    left: '-6%',
-                                    top: '-12%',
-                                    width: '112%',
-                                    height: '128%',
+                                    left: '-12%',
+                                    top: '-18%',
+                                    width: '124%',
+                                    height: '140%',
                                     overflow: 'visible',
                                     pointerEvents: 'none',
                                 }}
@@ -93,8 +84,9 @@ const Hero = ({ isMobile }: HeroProps) => {
                                 <path
                                     d="M24 40 C 8 14, 110 0, 182 16 C 206 24, 192 52, 112 55 C 48 58, 6 50, 16 28"
                                     fill="none"
-                                    stroke="#9db493"
-                                    strokeWidth="1.8"
+                                    // stroke="rgb(100, 163, 118)"
+                                    stroke=" rgb(15, 31, 21)"
+                                    strokeWidth="3"
                                     strokeLinecap="round"
                                     vectorEffect="non-scaling-stroke"
                                 />
@@ -111,6 +103,7 @@ const Hero = ({ isMobile }: HeroProps) => {
                         lineHeight: 1.5,
                         maxWidth: '520px',
                         textWrap: 'pretty',
+                        color: '#0F1F15',
                     }}
                 >
                     Ti accompagno dalla ricerca della gravidanza al
@@ -127,35 +120,17 @@ const Hero = ({ isMobile }: HeroProps) => {
                         flexWrap: 'wrap',
                     }}
                 >
-                    <a
-                        href="#prenota"
-                        style={{
-                            textDecoration: 'none',
-                            background: 'rgb(157, 180, 147)',
-                            color: 'rgb(46, 58, 43)',
-                            padding: '14px 26px',
-                            borderRadius: '999px',
-                            fontWeight: 700,
-                            textAlign: 'center',
-                        }}
-                    >
-                        Prenota la prima visita
-                    </a>
 
-                    <a
-                        href="#percorso"
-                        style={{
-                            textDecoration: 'none',
-                            border: '1.5px solid rgb(46, 58, 43)',
-                            color: 'rgb(46, 58, 43)',
-                            padding: '12.5px 24px',
-                            borderRadius: '999px',
-                            fontWeight: 500,
-                            textAlign: 'center',
-                        }}
-                    >
-                        Scopri il percorso
-                    </a>
+                    <div style={{ color: '#F1F8F3' }}>
+                        <Button type={isMobile ? 'small' : 'big'} bgColor='#64A376' text=' Prenota la prima visita' onClick={() => {
+
+                            window.open('https://calendly.com/benedetta-mosole/consulenza-nutrizionale', '_blank');
+                        }} />
+                    </div>
+
+                    <div style={{ color: '#F1F8F3' }}>
+                        <Button href="#percorso" type={isMobile ? 'small' : 'big'} bgColor='#0F1F15' text='Scopri il percorso' onClick={() => { }} />
+                    </div>
                 </div>
             </div>
 
@@ -173,7 +148,7 @@ const Hero = ({ isMobile }: HeroProps) => {
                     style={{
                         position: 'absolute',
                         inset: '18px -18px -18px 18px',
-                        background: 'rgb(157, 180, 147)',
+                        background: '#64A376',
                         borderRadius: '220px 220px 24px 24px',
                     }}
                 />

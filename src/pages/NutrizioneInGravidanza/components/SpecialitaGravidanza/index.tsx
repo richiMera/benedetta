@@ -1,4 +1,5 @@
 import type { CSSProperties } from 'react';
+import image from '../../../../assets/img/IMG_8411.jpeg';
 
 type SpecialitaGravidanzaProps = {
     isMobile: boolean;
@@ -35,6 +36,7 @@ const SpecialitaGravidanza = ({
                     alignItems: 'center',
                 }}
             >
+
                 {/* Foto */}
                 <div
                     style={{
@@ -47,7 +49,18 @@ const SpecialitaGravidanza = ({
                         background: '#E8EDE5',
                     }}
                 >
-                    {/* Inserire qui la foto di Benedetta */}
+                    <img
+                        src={image}
+                        alt="Benedetta Mosole, biologa nutrizionista"
+                        draggable={false}
+                        style={{
+                            width: '100%',
+                            height: '100%',
+                            objectFit: 'cover',
+                            objectPosition: 'center',
+                            display: 'block',
+                        }}
+                    />
                 </div>
 
                 {/* Testi */}
@@ -55,85 +68,51 @@ const SpecialitaGravidanza = ({
                     style={{
                         display: 'flex',
                         flexDirection: 'column',
-                        gap: '18px',
+                        gap: '',
                     }}
                 >
-                    <span
-                        style={{
-                            fontSize: '13px',
-                            letterSpacing: '0.1em',
-                            textTransform: 'uppercase',
-                            color: 'rgb(90, 115, 80)',
-                            fontWeight: 700,
-                        }}
-                    >
-                        Chi sono
-                    </span>
+                    <p className='overline' style={{ color: '#316A44', marginBottom: '24px' }}> Esperienza</p>
 
-                    <h2
+                    <h3 style={{ marginBottom: '32px', color: '#0F1F15' }}> Il mio metodo — {' '} <span
                         style={{
-                            fontFamily: 'Inter, sans-serif',
-                            fontWeight: 600,
-                            letterSpacing: '-0.025em',
-                            fontSize: 'clamp(30px, 3.6vw, 44px)',
-                            lineHeight: 1.1,
-                            margin: 0,
-                            textWrap: 'balance',
+                            position: 'relative',
+                            display: 'inline-block',
                         }}
                     >
-                        Sono Benedetta, e{' '}
-                        <span
+                        ascolto
+                        <svg
+                            viewBox="0 0 200 60"
+                            preserveAspectRatio="none"
                             style={{
-                                position: 'relative',
-                                display: 'inline-block',
+                                position: 'absolute',
+                                left: '-6%',
+                                top: '-12%',
+                                width: '112%',
+                                height: '128%',
+                                overflow: 'visible',
+                                pointerEvents: 'none',
                             }}
                         >
-                            ascolto
-                            <svg
-                                viewBox="0 0 200 60"
-                                preserveAspectRatio="none"
-                                style={{
-                                    position: 'absolute',
-                                    left: '-6%',
-                                    top: '-12%',
-                                    width: '112%',
-                                    height: '128%',
-                                    overflow: 'visible',
-                                    pointerEvents: 'none',
-                                }}
-                            >
-                                <path
-                                    d="M24 40 C 8 14, 110 0, 182 16 C 206 24, 192 52, 112 55 C 48 58, 6 50, 16 28"
-                                    fill="none"
-                                    stroke="#9db493"
-                                    strokeWidth="1.8"
-                                    strokeLinecap="round"
-                                    vectorEffect="non-scaling-stroke"
-                                />
-                            </svg>
-                        </span>{' '}
-                        prima di consigliare.
-                    </h2>
+                            <path
+                                d="M24 40 C 8 14, 110 0, 182 16 C 206 24, 192 52, 112 55 C 48 58, 6 50, 16 28"
+                                fill="none"
+                                stroke="rgb(100, 163, 118)"
+                                strokeWidth="3"
+                                strokeLinecap="round"
+                                vectorEffect="non-scaling-stroke"
+                            />
+                        </svg>
+                    </span>{' '}
+                        prima di consigliare.</h3>
+                    <p className='p-large' style={{ marginBottom: '20px', color: '#0F1F15' }}> Sono Benedetta Mosole, Biologa Nutrizionista ed Educatrice Mindfulness specializzata in nutrizione per la gravidanza. Ricevo a Rho, Spresiano e online.<br />
 
-                    <p
-                        style={{
-                            margin: 0,
-                            fontSize: isMobile ? '16px' : '17px',
-                            lineHeight: 1.65,
-                        }}
-                    >
-                        Ciao, sono Benedetta Mosole, Biologa Nutrizionista
-                        specializzata in gravidanza a Rho, Spresiano e online.
-                        Ti accompagno prima, durante e dopo la gestazione con
-                        sicurezza scientifica, ascolto ed empatia. Dalla ricerca
-                        del piccolo al post-parto, ti aiuto a vivere ogni fase
-                        con serenità e senza privazioni. Nel mio studio troverai
-                        risposte certe, soluzioni pratiche per gestire con
-                        equilibrio disturbi come nausea, reflusso, stitichezza,
-                        insulino-resistenza o diabete gestazionale, e tecniche
-                        di Mindful Eating per migliorare il tuo rapporto con il
-                        cibo.
                     </p>
+                    <p className='p-regular' style={{ color: '#0F1F15', marginBottom: '32px' }}> Grazie alla mia esperienza clinica presso la Clinica Mangiagalli e l’Ospedale Buzzi, ti accompagno dalla ricerca della gravidanza fino al post-parto con sicurezza scientifica, ascolto ed empatia, per aiutarti a vivere ogni fase con serenità e senza privazioni.
+
+                        Nel percorso con me troverai risposte certe, soluzioni pratiche per gestire con equilibrio disturbi come nausea, reflusso, stitichezza, insulino-resistenza o diabete gestazionale, e tecniche di Mindful Eating per migliorare il tuo rapporto con il cibo.</p>
+
+
+
 
                     {/* Punti di forza */}
                     <div

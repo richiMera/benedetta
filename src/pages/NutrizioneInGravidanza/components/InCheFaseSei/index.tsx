@@ -2,7 +2,10 @@
 import { useState } from 'react';
 
 type InCheFaseSeiProps = {
+    isBig: boolean;
     isMobile: boolean;
+    isForIpad: boolean;
+    isForIpadHor: boolean;
 };
 
 const fasi = [
@@ -36,7 +39,7 @@ const fasi = [
     },
 ];
 
-const InCheFaseSei = ({ isMobile }: InCheFaseSeiProps) => {
+const InCheFaseSei = ({ isMobile, isForIpadHor }: InCheFaseSeiProps) => {
     const [faseAttiva, setFaseAttiva] = useState(0);
 
     const fase = fasi[faseAttiva];
@@ -47,13 +50,12 @@ const InCheFaseSei = ({ isMobile }: InCheFaseSeiProps) => {
             style={{
                 maxWidth: '1160px',
                 margin: '0 auto',
-                padding: isMobile
-                    ? '56px 24px'
-                    : 'clamp(56px, 8vw, 112px) 24px',
+                padding: isMobile ? '60px 24px' : '192px 0',
                 display: 'flex',
                 flexDirection: 'column',
                 gap: '32px',
                 boxSizing: 'border-box',
+
             }}
         >
             {/* Titolo */}
@@ -62,31 +64,14 @@ const InCheFaseSei = ({ isMobile }: InCheFaseSeiProps) => {
                     display: 'flex',
                     flexDirection: 'column',
                     gap: '10px',
+                    alignItems: 'center', justifyContent: 'center', position: 'relative'
                 }}
             >
-                <span
-                    style={{
-                        fontSize: '13px',
-                        letterSpacing: '0.1em',
-                        textTransform: 'uppercase',
-                        color: 'rgb(90, 115, 80)',
-                        fontWeight: 700,
-                    }}
-                >
-                    In che fase sei?
-                </span>
+                <p className='overline' style={{ color: '#316A44', marginBottom: '24px' }}> In che fase sei?</p>
 
                 <h2
                     style={{
-                        fontFamily: 'Inter, sans-serif',
-                        fontWeight: 600,
-                        letterSpacing: '-0.025em',
-                        fontSize: isMobile
-                            ? '30px'
-                            : 'clamp(30px, 3.6vw, 44px)',
-                        lineHeight: 1.1,
-                        margin: 0,
-                        textWrap: 'balance',
+                        marginBottom: '32px', width: isMobile ? '100%' : isForIpadHor ? '100%' : '63%', textAlign: 'center'
                     }}
                 >
                     Ogni momento ha bisogni diversi
@@ -101,6 +86,8 @@ const InCheFaseSei = ({ isMobile }: InCheFaseSeiProps) => {
                     display: 'flex',
                     gap: '8px',
                     flexWrap: 'wrap',
+                    alignItems: 'center', justifyContent: 'center', position: 'relative',
+                    marginBottom: '24px'
                 }}
             >
                 {fasi.map((item, index) => {
@@ -124,9 +111,9 @@ const InCheFaseSei = ({ isMobile }: InCheFaseSeiProps) => {
                                 cursor: 'pointer',
                                 padding: '10px 18px',
                                 borderRadius: '999px',
-                                border: '1.5px solid rgb(46, 58, 43)',
+                                border: '1.5px solid #64a376',
                                 background: attivo
-                                    ? 'rgb(157, 180, 147)'
+                                    ? '#64a376'
                                     : 'transparent',
                                 color: 'rgb(46, 58, 43)',
                                 transition:
@@ -145,7 +132,7 @@ const InCheFaseSei = ({ isMobile }: InCheFaseSeiProps) => {
                 role="tabpanel"
                 aria-labelledby={`fase-tab-${faseAttiva}`}
                 style={{
-                    background: 'rgb(233, 238, 228)',
+                    background: 'rgb(221, 238, 223)',
                     borderRadius: '28px',
                     padding: isMobile
                         ? '24px'
@@ -219,7 +206,7 @@ const InCheFaseSei = ({ isMobile }: InCheFaseSeiProps) => {
                         <p
                             style={{
                                 margin: 0,
-                                fontSize: '16px',
+                                fontSize: isMobile ? '16px' : '20px',
                                 lineHeight: 1.7,
                                 color: 'rgb(46, 58, 43)'
                             }}

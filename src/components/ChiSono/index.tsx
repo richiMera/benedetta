@@ -17,7 +17,7 @@ interface Props {
 
 }
 
-const ChiSono: React.FC<Props> = ({ isMedium, isMobile }) => {
+const ChiSono: React.FC<Props> = ({ isMobile }) => {
     const [openDrawer, setOpenDrawer] = useState(false);
     const details = [
         {
@@ -41,17 +41,10 @@ const ChiSono: React.FC<Props> = ({ isMedium, isMobile }) => {
             content: "Ho avuto l’opportunità di collaborare volontariamente con l’ambulatorio di Nutrizione dedicato alle Patologie della Gravidanza presso la prestigiosa Clinica Mangiagalli. Qui ho condotto visite nutrizionali e preso parte a uno studio di ricerca, il cui abstract dal titolo «Analisi delle caratteristiche bioimpedenziometriche nelle donne con gravidanze complicate da disordini ipertensivi nei tre trimestri» è stato pubblicato dalla Società Italiana di Ecografia Ostetrico Ginecologica."
         },
         {
-            year: "Febbraio 2024",
-            content: "Ho intrapreso l’attività di libera professione offrendo consulenze nutrizionali e dedicandomi con entusiasmo alla divulgazione scientifica tramite contributi sui social. Parallelamente, il mio ruolo come Clinical Study Coordinator mi consente di unire la pratica professionale alla mia passione per la ricerca, ampliando continuamente le mie competenze."
+            year: "Febbraio 2024-Presente",
+            content: "Svolgo l’attività di libera professione offrendo consulenze nutrizionali e dedicandomi con entusiasmo alla divulgazione scientifica tramite contributi sui social e collaborando attivamente con Fondazione Veronesi per portare l'educazione alimentare e la prevenzione nelle scuole. L'esperienza precedente come Clinical Study Coordinator (Febbraio 2024 – Ottobre 2025) mi ha permesso di integrare la ricerca clinica con la pratica ambulatoriale, offrendo un supporto basato su solide evidenze scientifiche."
         },
     ]
-
-    console.log(isMedium);
-
-
-
-
-
 
 
     return (
@@ -113,7 +106,10 @@ const ChiSono: React.FC<Props> = ({ isMedium, isMobile }) => {
                                 certificazioni e corsi: */}
                             <p className='p-regular'>
                                 <span style={{ color: '#F1F8F3' }}>Ho una certificazione come educatrice di mindfulness.</span> </p>
-                            <p className='p-regular' style={{ color: '#F1F8F3' }}><span style={{ color: '#9CC8A7' }}>@drittialsodo</span>: utilizzo il mio profilo social per divulgare contenuti scientificamente validi e dare spunti di piatti facili, veloci e completi.</p>
+                            <p className='p-regular' style={{ color: '#F1F8F3' }}><a href="https://www.instagram.com/benedettamosole_nutrizionista/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="Instagram di Benedetta Mosole" style={{ color: '#9CC8A7' }}>@benedettamosole_nutrizionista</a>: utilizzo il mio profilo social per divulgare contenuti scientificamente validi e dare spunti di piatti facili, veloci e completi.</p>
                         </Grid2>
 
                     </Grid2>

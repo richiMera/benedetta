@@ -42,11 +42,11 @@ const DiconoDiMe: React.FC<Props> = ({ isMedium, isMobile, type = 'home' }) => {
                 author: 'Giorgia',
                 content: 'Benedetta ha compreso ogni mia difficoltà e mi ha accolta tenendo presente ogni dettaglio per poter creare un percorso nutrizionale totalmente aderente alle mie necessità. È la prima volta dopo anni che trovo una soluzione al mio problema, che esiste da sempre. Spero di essere brava a portare avanti le indicazioni e i consigli anche quando finirò il percorso, che ormai è diventato un appoggio fondamentale quotidiano! Ve la consiglio!',
             },
-            {
-                stars: 5,
-                author: 'Giulia',
-                content: 'Prima stavo malissimo, ero sempre gonfia e soffrivo di stitichezza, mentre oggi vado in bagno regolarmente e sto decisamente meglio a livello di gonfiore.',
-            },
+            /*  {
+                 stars: 5,
+                 author: 'Giulia',
+                 content: 'Prima stavo malissimo, ero sempre gonfia e soffrivo di stitichezza, mentre oggi vado in bagno regolarmente e sto decisamente meglio a livello di gonfiore.',
+             }, */
         ]
 
 

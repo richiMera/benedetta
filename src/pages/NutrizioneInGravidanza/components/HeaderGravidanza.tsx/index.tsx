@@ -4,6 +4,7 @@ import hamburgerIcon from '../../../../assets/img/burger.svg';
 import closeIcon from '../../../../assets/img/close-icon-small.svg';
 import { Drawer } from '@mui/material';
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 interface Props {
     isForIpad: boolean;
@@ -19,15 +20,15 @@ const HeaderGravidanza: React.FC<Props> = ({
     forBurger,
 }) => {
     const [openDrawer, setOpenDrawer] = useState(false);
-
+    const navigate = useNavigate();
     const menuItems = [
 
         { label: 'I tuoi pensieri', id: 'pensieri' },
         { label: 'Le fasi', id: 'fasi' },
         { label: 'Nutrizione', id: 'quello-che-mangi' },
-        { label: 'Chi sono', id: 'chi-sono' },
-        { label: 'Dicono di me', id: 'dicono-di-me-grav' },
+        { label: 'Esperienza', id: 'chi-sono' },
         { label: 'Il percorso', id: 'percorso' },
+        { label: 'Dicono di me', id: 'dicono-di-me-grav' },
         { label: 'FAQ', id: 'faq-grav' },
 
     ];
@@ -42,7 +43,7 @@ const HeaderGravidanza: React.FC<Props> = ({
     };
 
     const bookAppointment = () => {
-        scrollToSection('prenota');
+        window.open('https://calendly.com/benedetta-mosole/consulenza-nutrizionale', '_blank');
     };
 
     const isCompact = isMobile || isForIpad || forBurger;
@@ -152,7 +153,7 @@ const HeaderGravidanza: React.FC<Props> = ({
                     href="#top"
                     onClick={(event) => {
                         event.preventDefault();
-                        scrollToSection('top');
+                        navigate('/');
                     }}
                     style={{
                         width: isCompact ? '80%' : 'auto',
@@ -170,7 +171,7 @@ const HeaderGravidanza: React.FC<Props> = ({
                         className="caption"
                         style={{ color: '#5A7350' }}
                     >
-                        Nutrizione in gravidanza
+                        Biologa Nutrizionista
                     </p>
                 </a>
 
@@ -211,13 +212,15 @@ const HeaderGravidanza: React.FC<Props> = ({
                                 {item.label}
                             </a>
                         ))}
+                        <div style={{ color: '#F1F8F3' }}>
+                            <Button
+                                type="small"
+                                text="Prenota una visita"
+                                bgColor="#64A376"
+                                onClick={bookAppointment}
+                            />
+                        </div>
 
-                        <Button
-                            type="small"
-                            text="Prenota una visita"
-                            bgColor="#9DB493"
-                            onClick={bookAppointment}
-                        />
                     </nav>
                 )}
             </header>

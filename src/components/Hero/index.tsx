@@ -15,7 +15,7 @@ interface Props {
 const Hero: React.FC<Props> = ({ isMobile, isBig, isForIpad, isForIpadHor }) => {
 
 
-    console.log(isMobile);
+
 
 
 

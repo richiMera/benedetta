@@ -46,7 +46,7 @@ const Header: React.FC<Props> = ({ isForIpad, isMobile, isForIpadHor, forBurger 
                             <div style={{ padding: '16px 0', color: '#F1F8F3', borderBottom: '1px solid #9CC8A7' }}>
                                 <a
                                     style={{ fontSize: isForIpadHor ? '' : '' }}
-                                    className="button"
+                                    className="p-large"
                                     href="/nutrizione-in-gravidanza"
                                     onClick={(event) => {
                                         event.preventDefault();
@@ -87,7 +87,7 @@ const Header: React.FC<Props> = ({ isForIpad, isMobile, isForIpadHor, forBurger 
 
                             }}
                             onClick={() => {
-                                window.open('https://www.miodottore.it/benedetta-mosole/nutrizionista/rho#profile-pricing', '_blank');
+                                window.open('https://calendly.com/benedetta-mosole/consulenza-nutrizionale', '_blank');
                             }}
                         >
                             Prenota una visita
@@ -122,7 +122,7 @@ const Header: React.FC<Props> = ({ isForIpad, isMobile, isForIpadHor, forBurger 
                     <a style={{ fontSize: isForIpadHor ? '' : '' }} className={'button'} href='#faq'>FAQ</a>
                     <a style={{ fontSize: isForIpadHor ? '' : '' }} className={'button'} href='#contatti'>Contatti</a>
                     <Button type='small' text={'Prenota una visita'} bgColor='white' onClick={() => {
-                        window.open('https://www.miodottore.it/benedetta-mosole/nutrizionista/rho#profile-pricing', '_blank');
+                        window.open('https://calendly.com/benedetta-mosole/consulenza-nutrizionale', '_blank');
                     }} />
 
                     {/* <p className='caption c-black'>{ !isMobile && 'Hai un progetto in mente?'} <span className='c-blue'>Contattaci</span></p> */}

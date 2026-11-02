@@ -1,11 +1,10 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { useMediaQuery } from '@react-hook/media-query';
 import '../../App.css'
 import Header from '../../components/Header';
 import Hero from '../../components/Hero';
 import Prestazioni from '../../components/Prestazioni';
 import Percorsi from '../../components/Percorsi';
-import Lenis from 'lenis';
 import ChiSono from '../../components/ChiSono';
 import Grid from '@mui/material/Grid2';
 import GridWrapper from '../../components/GridWrapper';
@@ -16,6 +15,7 @@ import DiconoDiMe from '../../components/DiconoDiMe';
 import FAQ from '../../components/FAQ';
 import Footer from '../../components/Footer';
 import PercorsoGravidanza from '../../components/PercorsoGravidanza';
+import useLenis from '../../hooks/useLenis';
 
 function App() {
 
@@ -41,55 +41,7 @@ function App() {
     // const grids = Array.from({ length: 12 }, (_, index) => index + 1); // Array [1, 2, ..., 12]
 
 
-    useEffect(() => {
-        // Inizializza Lenis
-        const lenis = new Lenis({
-            duration: 1.2,
-            easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-        });
-        // lenis.on('scroll', (e: any) => {
-        //   // Ignora elementi con data-scroll-lock
-        //   const target = e.target.closest('[data-scroll-lock]');
-        //   if (target) return;
-        // });
-
-        // Funzione per il frame della richiesta di animazione
-        function raf(time: number) {
-            lenis.raf(time);
-            requestAnimationFrame(raf);
-        }
-
-        // Gestore di click per gli anchor
-        const handleAnchorClick = (event: Event) => {
-            event.preventDefault();
-            const target = event.currentTarget as HTMLAnchorElement;
-            const targetId = target.getAttribute('href')?.slice(1);
-
-            if (targetId) {
-                const targetElement = document.getElementById(targetId);
-                if (targetElement) {
-                    lenis.scrollTo(targetElement);
-                }
-            }
-        };
-
-        // Aggiunge i listener agli anchor
-        const anchors = document.querySelectorAll('a[href^="#"]');
-        anchors.forEach(anchor => {
-            anchor.addEventListener('click', handleAnchorClick);
-        });
-
-        // Avvia l'animazione
-        requestAnimationFrame(raf);
-
-        // Pulizia al momento dello smontaggio del componente
-        return () => {
-            anchors.forEach(anchor => {
-                anchor.removeEventListener('click', handleAnchorClick);
-            });
-        };
-    }, [openInfo]); // Effettua l'operazione solo al montaggio del componente
-
+    useLenis();
 
 
 
