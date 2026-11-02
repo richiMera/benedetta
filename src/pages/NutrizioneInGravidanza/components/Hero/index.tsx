@@ -1,5 +1,5 @@
 
-import heroIage from '../../../../assets/img/Caroselli - Benedetta Mosole (1).png'
+import heroIage from '../../../../assets/img/hero-benedetta.webp'
 import Button from '../../../../components/Button';
 type HeroProps = {
     isMobile: boolean;
@@ -166,6 +166,9 @@ const Hero = ({ isMobile }: HeroProps) => {
                     <img
                         src={heroIage}
                         alt="Donna in gravidanza in un ambiente luminoso"
+                        fetchPriority="high"
+                        loading="eager"
+                        decoding="async"
                         style={{
                             width: '100%',
                             height: '100%',
