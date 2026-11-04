@@ -62,7 +62,7 @@ function NutrizioneInGravidanza() {
 
             <SpecialitaGravidanza isMobile={isMobile} />
 
-            <IlPercorso isMobile={isMobile} />
+            <IlPercorso isMobile={isMobile} isForIpad={isForIpad} />
             <div id='dicono-di-me-grav' style={{ position: 'relative', backgroundColor: '#F1F8F3' }}>
                 <GridWrapper style={{ padding: isMobile ? '96px 0 96px 0' : '96px 0', maxWidth: '1728px', margin: 'auto' }} >
 

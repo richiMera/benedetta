@@ -3,9 +3,10 @@ import Button from '../../../../components/Button';
 
 type IlPercorsoProps = {
     isMobile: boolean;
+    isForIpad: boolean;
 };
 
-const IlPercorso = ({ isMobile }: IlPercorsoProps) => {
+const IlPercorso = ({ isMobile, isForIpad }: IlPercorsoProps) => {
     const fasi = [
         {
             titolo: 'Ci conosciamo',
@@ -293,7 +294,14 @@ const IlPercorso = ({ isMobile }: IlPercorsoProps) => {
                         boxSizing: 'border-box',
                     }}
                 >
-                    <div style={{ display: 'flex', gap: '10px' }}>
+                    <div
+                        style={{
+                            display: 'flex',
+                            flexDirection: isMobile || isForIpad ? 'column' : 'row',
+                            alignItems: isMobile || isForIpad ? 'flex-start' : 'center',
+                            gap: '10px',
+                        }}
+                    >
                         <span
                             style={{
                                 alignSelf: 'flex-start',
