@@ -62,9 +62,9 @@ const HeaderGravidanza: React.FC<Props> = ({
                         style={{
                             height: '100svh',
                             width: '100vw',
-                            maxWidth: '420px',
+
                             boxSizing: 'border-box',
-                            backgroundColor: '#2E3A2B',
+                            backgroundColor: 'rgb(15, 31, 21)',
                             padding: '80px 24px 24px',
                             position: 'relative',
                             display: 'flex',
